@@ -13,10 +13,10 @@ func main() {
     log.SetFlags(0)
 
     // A slice of names.
-    names := []string("Gladys", "Limak", "Rose", "Lily", "Luna", "Sol")
+    names := []string{"Gladys", "Limak", "Rose", "Lily", "Luna", "Sol"}
 
-    // Request a greeting message.
-    message, err := greetings.Hello("Limak")
+    // Request greeting messages for the names.
+    messages, err := greetings.Hellos(names)
     // If an error was returned, print it to the console and exit the program.
     if err != nil {
         log.Fatal(err)
